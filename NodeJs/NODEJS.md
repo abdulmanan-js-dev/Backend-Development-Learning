@@ -47,6 +47,8 @@ The program supports three main commands:
 
 All tasks are stored in a local file `tasks.json`, which is created automatically.
 
+---
+
 #### Folder Structure
 
 NodeJS/Todo
@@ -91,16 +93,64 @@ node todo.js list
 node todo.js remove 1
 ```
 
+---
+
 ### Contacts
 
 #### Overview
 
+This project is a CLI-based Contact Manager built using Node.js and the File System (fs) module.
+
+It allows users to add, list, and remove contacts that are saved persistently in a JSON file.
+
+Each contact contains a name (title) and a contact number.
+The program uses synchronous file handling methods for simplicity and immediate feedback in the terminal.
+
+---
+
 #### Folder Structure
+
+NodeJS/Contacts/
+
+-   contacts.js
+-   savedContacts.json (auto-generated)
+
+---
 
 #### Key Takeaways
 
+-   `const filePath = "./savedContacts.json";` — Defines the file name and storage location.
+-   `fs.readFileSync()` and `fs.writeFileSync()` — Handle file reading and writing.
+-   `JSON.parse()` and `JSON.stringify()` — Used to serialize and deserialize data for storage.
+-   `Array.prototype.filter()` — Used to remove a contact by name.
+-   Basic CLI argument parsing using `process.argv`.
+
+---
+
 #### Features
+
+-   Add a new contact with a name and phone number.
+-   Prevents duplicate contact names.
+-   List all stored contacts in the console.
+-   Remove a specific contact by name.
+-   Displays friendly CLI feedback for all operations.
+-   Automatically creates the data file if missing.
+
+---
 
 #### 💻 Commands
 
 Run these commands in your terminal inside the project folder
+
+```javascript
+// Add a new contact
+node contacts.js add "Ali Khan" 03001234567
+
+// List all contacts
+node contacts.js list
+
+//Remove a contact by name
+node contacts.js remove "Ali Khan"
+```
+
+---
