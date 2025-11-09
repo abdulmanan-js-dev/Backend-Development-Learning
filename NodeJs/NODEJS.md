@@ -154,3 +154,9 @@ node contacts.js remove "Ali Khan"
 ```
 
 ---
+
+## Project 2 - Build our basic server inspired by Nginx with Node.js
+
+### Overview
+
+In this project, I'll build a basic server inspired by Nginx. While it won't cover all Nginx features, it will demonstrate core concepts such as how servers work and how to build one from scratch using Node.js.The server will handle HTTP requests, serve static files, and implement basic routing.
